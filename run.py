@@ -1,3 +1,5 @@
+#!/usr/bin/python3.7
+
 from flask_migrate import Migrate
 from configs.config import config_dict
 from app import create_app, db
@@ -15,4 +17,4 @@ app = create_app(config_mode)
 Migrate(app, db)
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug = True,host='0.0.0.0')
